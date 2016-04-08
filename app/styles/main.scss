@@ -1,5 +1,24 @@
-@import 'variables';
-
+@import 'normalize', 'variables',
+'grid';
 body {
-  background: $light-grey;
+    background: $light-grey;
 }
+
+nav {
+    height: 5em;
+    background-color: red;
+}
+
+main {
+   
+    background-color: blue;
+    overflow: hidden;
+}
+
+.place {
+    height: 20em;
+    background-color: green;
+    margin-bottom: 1em;
+}
+
+
