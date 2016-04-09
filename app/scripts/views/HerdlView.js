@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Backbone from 'backbone';
 
 
-const ToDoItemView = Backbone.View.extend({
+const HerdlView = Backbone.View.extend({
 	tagName: 'p',
 	className: 'to-do-item',
 	events: {
