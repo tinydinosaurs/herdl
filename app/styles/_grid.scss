@@ -63,7 +63,7 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
     @include grid(12);
 }
 
-@media (min-width: 650px) {
+@media (min-width: 400px) {
     .row {
         overflow: visible;
     }
@@ -72,9 +72,7 @@ $ind-col-width: ($tot-width - ($gut-width * ($num-col - 1))) / $num-col;
             &:nth-child(even){
                 margin-right: $gut-width;
             }
-            &:nth-child(3n) {
-                margin-right: 0;
-            }
+
         }
 
     }
