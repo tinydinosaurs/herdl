@@ -1,5 +1,5 @@
 // import the stylesheet. this is necessary so that webpack will compile all the sass into css and then build it into our style.css file
-import './../styles/main.scss';
+import './../scss/main.scss';
 
 import $ from 'jquery';
 import HerdlView from './views/HerdlView';
@@ -16,16 +16,18 @@ var settings = {
 	// on success, do the following to each element in the collection of herdl entries
 	success: function() {
 		herdlEntries.forEach((entry) => {
-			console.log(entry.get('title'));
+			// console.log(entry.get('title'));
 			let entryView = new HerdlView(
 				entry.get('image_url'),
 				entry.get('url'),
 				entry.get('title'),
 				entry.get('body'),
-				entry.get('zip')
+				entry.get('zip'),
+				entry.get('votes_count'),
+				entry.get('id')
 				// entry.get('votes_count')
 			);
-			$('main').append(entryView.el);
+			$('.card-box').append(entryView.el);
 		});
 	}
 };
@@ -48,10 +50,10 @@ $('.submit').on('click', (e) => {
            {newHerdl});
 });
 
-$('.vote').on('click', (e) => {
-	e.preventDefault();
-	$.post( "https://herdle-app.herokuapp.com/api/entries/14/votes");
-	console.log('i did something');
-});
+// $('.vote').on('click', (e) => {
+// 	e.preventDefault();
+// 	$.post( "https://herdle-app.herokuapp.com/api/entries/14/votes");
+// 	console.log('i did something');
+// });
 
 // for vote counts https://herdle-app.herokuapp.com/api/entries/id/votes

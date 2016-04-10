@@ -1,6 +1,9 @@
 import Backbone from 'backbone';
 
 const HerdlEntryModel = Backbone.Model.extend({
+	initialize: function(){
+      console.log('Something wonderful just happened.');
+  	},
 	defaults: {
 		id: null,
 		image_url: 'please provide a photo url',
