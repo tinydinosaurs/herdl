@@ -47,20 +47,22 @@ const HerdlView = Backbone.View.extend({
 	upVote: function() {
 		console.log('thumbs up');
 		console.log(this.id);
-		let feels = 1;
-		$.post( `https://herdle-app.herokuapp.com/api/entries/${this.id}/votes`, {feels});
+		let up_vote = 1;
+		let down_vote = 0;
+		$.post( `https://herdle-app.herokuapp.com/api/entries/${this.id}/votes`, {up_vote, down_vote});
 		// this.$el.toggleClass('complete');
 	},
 
 	downVote: function() {
 		console.log('thumbs down');
-		let feels = -1;
-		$.post(`https://herdle-app.herokuapp.com/api/entries/${this.id}/votes`, {feels});
+		let up_vote = 0;
+		let down_vote = 1;
+		$.post(`https://herdle-app.herokuapp.com/api/entries/${this.id}/votes`, {up_vote, down_vote});
 		// this.$el.remove();
 	},
 
-	favorite: function() {
-		$('.favorite').toggleClass('selected');
+	favorite: function(heart) {
+		$(heart.currentTarget).toggleClass('selected');
 		console.log('i heart you');
 	}
 }); 

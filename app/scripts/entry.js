@@ -23,7 +23,7 @@ var settings = {
 				entry.get('title'),
 				entry.get('body'),
 				entry.get('zip'),
-				entry.get('votes_count'),
+				entry.get('aggregate_votes'),
 				entry.get('id')
 				// entry.get('votes_count')
 			);
@@ -48,6 +48,7 @@ $('.submit').on('click', (e) => {
 	
  herdlEntries = $.post( "https://herdle-app.herokuapp.com/api/entries", 
            {newHerdl});
+
 });
 
 // $('.vote').on('click', (e) => {
