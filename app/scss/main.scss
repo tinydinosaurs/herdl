@@ -83,12 +83,14 @@ body {
         i {
             color: $teal;
         }
+        
+        i.selected {
+                color: coral;
+            }
+
     }
 }
 
-.selected {
-    color: $amber;
-}
 
 //Pagination styles
 .herdl-pagination {
