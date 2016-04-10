@@ -3,23 +3,29 @@ import Backbone from 'backbone';
 
 
 const HerdlView = Backbone.View.extend({
-	tagName: 'p',
-	className: 'to-do-item',
-	events: {
-		'click .className': 'completeItems',
-		'submit .buttonName': 'removeItems'
-	},
-	initialize: function(input) {
-		this.input = input;
+	className: 'col col-sm-6 col-md-4',
+	events: {},
+	initialize: function(image_url, url, title, body, zip, votes) {
+		this.image_url = image_url;
+		this.url = url;
+		this.title = title;
+		this.body = body;
+		this.zip = zip;
+		this.votes = votes;
 		this.render();
 	},
 	template: function() {
 		return `
-		// ${this.input} <i class="fa fa-trash-o"></i>
+            <div class="place">
+            <p>${this.title}</p>
+            <img src="${this.image_url}">
+            <p>${this.body}</p>
+            <div><span>${this.votes}</span></div>
+            </div>
 		`
 	},
 	render: function() {
-		// this.$el.append(this.template());
+		this.$el.append(this.template());
 		// $('#to_do_list').append(this.el);
 	},
 
@@ -32,7 +38,7 @@ const HerdlView = Backbone.View.extend({
 	}
 }); 
 
-
+// i think the vote click event needs to live here!!!
 
 
 export default HerdlView

@@ -1,7 +1,7 @@
 import Backbone from 'backbone';
-import HerdlUserModel from '../models/ToDoListModel';
+import HerdlUserModel from '../models/HerdlUserModel';
 
-const HerdlEntryCollection = Backbone.Collection.extend({
+const HerdlUserCollections = Backbone.Collection.extend({
 	model: HerdlUserModel,
 	url: ''
 });

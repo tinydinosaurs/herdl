@@ -1,7 +1,7 @@
 import Backbone from 'backbone';
 
 
-const HerdlEntryModel = Backbone.Model.extend({
+const HerdlUserModel = Backbone.Model.extend({
 	defaults: {
 		name: '',
 		username: '',
