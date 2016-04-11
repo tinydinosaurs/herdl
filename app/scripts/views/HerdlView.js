@@ -34,7 +34,7 @@ const HerdlView = Backbone.View.extend({
 				<div class="card-action">
 					<i class="material-icons right favorite">favorite_border</i>
 					<a href="${this.url}">visit website</a>
-					${this.votes}
+					<span class="vote-count">${this.votes}</span>
 					<i class="material-icons right down">keyboard_arrow_down</i>
 					<i class="material-icons right up">keyboard_arrow_up</i>
 				</div>

@@ -50,12 +50,3 @@ $('.submit').on('click', (e) => {
            {newHerdl});
 
 });
-
-// $('.vote').on('click', (e) => {
-// 	e.preventDefault();
-// 	$.post( "https://herdle-app.herokuapp.com/api/entries/14/votes");
-// 	console.log('i did something');
-// });
-
-// for vote counts https://herdle-app.herokuapp.com/api/entries/id/votes
-
