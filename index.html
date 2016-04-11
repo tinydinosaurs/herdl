@@ -23,8 +23,8 @@
         <nav>
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo">herdl </a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons herdl-menu">menu</i></a>
+                <ul class="right hide-on-med-and-down herdl-links">
                     <li><a href="#form">Add New</a></li>
                     <li><a href="badges.html">Profile</a></li>
                     <li><a href="collapsible.html">Favorites</a></li>
@@ -41,6 +41,10 @@
     </div>
     <div class="container">
 
+        <div class="tagline">
+            <h1>Herdl, Keep your herd together..</h1>
+            <h2>Search Austin's best pet friendly places.</h2>
+        </div>
         <!-- Search -->
 
         <form>
@@ -70,25 +74,33 @@
         </div>
 
     </div>
-    
-     <a name="form"></a><form class="row">
-            <div class="input-field col s6">
-                <input class="title entry" type="text" placeholder="title">
-            </div>
-            <div class="input-field col s6">
-                <input class="image-url entry" type="text" placeholder="image url">
-            </div>
-            <div class="input-field col s6">
-                <input class="description entry" type="text" placeholder="description">
-            </div>
-            <div class="input-field col s6">
-                <input class="website entry" type="text" placeholder="website">
-            </div>
-            <div class="input-field col s6">
-                <input class="zip-code entry" type="text" placeholder="zip code">
-            </div>
-                <button class="submit" type="submit">Submit Herdl</button>
-        </form>
+
+
+    <a name="form"></a>
+
+
+    <form class="row suggest">
+        <h1>Suggest New</h1>
+        <div class="input-field col s12">
+            <input class="title entry" type="text" placeholder="title">
+        </div>
+        <div class="input-field col s12">
+            <input class="image-url entry" type="text" placeholder="image url">
+        </div>
+        <div class="input-field col s12">
+            <input class="description entry" type="text" placeholder="description">
+        </div>
+        <div class="input-field col s12">
+            <input class="website entry" type="text" placeholder="website">
+        </div>
+        <div class="input-field col s12">
+            <input class="zip-code entry" type="text" placeholder="zip code">
+        </div>
+        <div class="col submit-button s12">
+            <button class="submit" type="submit">Submit To Herdl</button>
+        </div>
+
+    </form>
 
 </body>
 

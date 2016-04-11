@@ -1809,7 +1809,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-h1 {
+h1, .container .tagline h2 {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -2084,7 +2084,7 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .container .input-field #search:focus {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav, .container .input-field #search:focus, .suggest {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-floating:hover {
@@ -2601,12 +2601,21 @@ input[type=range] + .thumb {
   max-width: 1280px;
   width: 95%; }
 
+.suggest {
+  width: 95% !important; }
+
 @media only screen and (min-width: 601px) {
   .container {
-    width: 90%; } }
+    width: 90%; }
+
+  .suggest {
+    width: 60% !important; } }
 @media only screen and (min-width: 993px) {
   .container {
-    width: 85%; } }
+    width: 85%; }
+
+  .suggest {
+    width: 50% !important; } }
 .container .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
@@ -3147,31 +3156,6 @@ nav {
 
   .navbar-fixed {
     height: 64px; } }
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Thin), url("../fonts/roboto/Roboto-Thin.eot");
-  src: url("../fonts/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"), url("../fonts/roboto/Roboto-Thin.woff") format("woff"), url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
-  font-weight: 200; }
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Light), url("../fonts/roboto/Roboto-Light.eot");
-  src: url("../fonts/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/roboto/Roboto-Light.woff") format("woff"), url("../fonts/roboto/Roboto-Light.ttf") format("truetype");
-  font-weight: 300; }
-@font-face {
-  font-family: "Roboto";
-  src: local(Roboto Regular), url("../fonts/roboto/Roboto-Regular.eot");
-  src: url("../fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
-  font-weight: 400; }
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/roboto/Roboto-Medium.eot");
-  src: url("../fonts/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/roboto/Roboto-Medium.woff") format("woff"), url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
-  font-weight: 500; }
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/roboto/Roboto-Bold.eot");
-  src: url("../fonts/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/roboto/Roboto-Bold.woff") format("woff"), url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
-  font-weight: 700; }
 a {
   text-decoration: none; }
 
@@ -3190,14 +3174,14 @@ html {
     html {
       font-size: 15px; } }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .container .tagline h2, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.1; }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, .container .tagline h2 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-weight: inherit; }
 
-h1 {
+h1, .container .tagline h2 {
   font-size: 4.2rem;
   line-height: 110%;
   margin: 2.1rem 0 1.68rem 0; }
@@ -3834,7 +3818,7 @@ a.waves-effect .waves-ripple {
   @media only screen and (max-width: 992px) {
     .modal {
       width: 80%; } }
-  .modal h1, .modal h2, .modal h3, .modal h4 {
+  .modal h1, .modal .container .tagline h2, .container .tagline .modal h2, .modal h2, .modal h3, .modal h4 {
     margin-top: 0; }
   .modal .modal-content {
     padding: 24px; }
@@ -6150,17 +6134,34 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 body {
   background-color: #f5f5f5; }
 
+i {
+  cursor: pointer; }
+
 .navbar-fixed {
   z-index: 999; }
   .navbar-fixed .nav-wrapper {
     background-color: #00897b; }
     .navbar-fixed .nav-wrapper .brand-logo {
       margin-left: 1em; }
+    .navbar-fixed .nav-wrapper .herdl-menu {
+      margin-left: .5em; }
+    .navbar-fixed .nav-wrapper .herdl-links {
+      margin-right: 1em; }
 
 .container {
   margin-top: 3em; }
+  .container .tagline {
+    text-align: center; }
+    .container .tagline h1, .container .tagline h2 {
+      margin: 0;
+      font-size: 1.75em;
+      color: coral; }
+    .container .tagline h2 {
+      font-size: 1.15em;
+      margin-top: .5em;
+      color: darkgrey; }
   .container .input-field #search {
-    border-bottom: 1px solid #ffab40; }
+    border-bottom: 1px solid coral; }
   .container .input-field #search:focus {
     border-bottom: 0; }
   .container .input-field .close {
@@ -6184,6 +6185,10 @@ body {
     min-width: 100%;
     width: auto; }
   .card .card-image .card-title {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     z-index: 998; }
 .card .card-content p {
   display: block;
@@ -6200,12 +6205,46 @@ body {
 .card .card-action a {
   margin: 0 !important; }
 .card .card-action i {
-  color: #00897b; }
+  color: #00897b;
+  margin-left: 0px !important; }
+.card .card-action span {
+  font-weight: bold;
+  font-size: 1em;
+  color: coral;
+  text-align: center;
+  width: 20px;
+  margin-left: 0px !important; }
+.card .card-action .heart {
+  margin-left: 15px !important; }
+.card .card-action i.selected {
+  color: coral; }
 
-.selected {
-  color: #ffab40; }
+.suggest {
+  width: 50%;
+  text-align: center;
+  background-color: white;
+  padding: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em; }
+  .suggest h1, .suggest .container .tagline h2, .container .tagline .suggest h2 {
+    margin: 0;
+    margin-top: .5em;
+    font-size: 2em;
+    color: coral; }
+  .suggest .submit-button {
+    text-align: center;
+    margin-top: 2em; }
+    .suggest .submit-button button {
+      border: none;
+      background-color: coral;
+      color: white;
+      border-radius: 3px;
+      width: 10em;
+      height: 2em;
+      font-size: 1.25em;
+      margin-bottom: 1em; }
 
 .herdl-pagination .pagination li.active {
-  background-color: #ffab40 !important; }
+  background-color: coral !important; }
 
 /*# sourceMappingURL=main.css.map */

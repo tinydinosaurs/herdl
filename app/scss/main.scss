@@ -4,13 +4,16 @@ $line-height: 1.4;
 $lines-to-show: 4;
 $teal: #00897b;
 $background: #f5f5f5;
-$amber: #ffab40;
+$amber: coral;
 $teal-accent: #00695c;
 body {
     background-color: $background;
 }
 
-i {cursor: pointer}
+i {
+    cursor: pointer
+}
+
 .navbar-fixed {
     z-index: 999;
     .nav-wrapper {
@@ -18,11 +21,33 @@ i {cursor: pointer}
         .brand-logo {
             margin-left: 1em;
         }
+        .herdl-menu {
+            margin-left: .5em;
+        }
+        .herdl-links {
+            margin-right: 1em;
+        }
     }
 }
 
 .container {
     margin-top: 3em;
+    .tagline {
+        text-align: center;
+        h1 {
+            
+            margin: 0;
+            font-size: 1.75em;
+            color: coral;
+        }
+        h2 {
+            @extend h1;
+            font-size: 1.15em;
+            margin-top: .5em;
+            color: darkgrey;
+            
+        }
+    }
     .input-field {
         #search {
             border-bottom: 1px solid $amber;
@@ -59,6 +84,10 @@ i {cursor: pointer}
             width: auto;
         }
         .card-title {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             z-index: 998;
         }
     }
@@ -83,15 +112,54 @@ i {cursor: pointer}
         }
         i {
             color: $teal;
+            margin-left: 0px !important;
         }
-
+        span {
+            font-weight: bold;
+            font-size: 1em;
+            color: coral;
+            text-align: center;
+            width: 20px;
+            margin-left: 0px !important;
+        }
+        .heart {
+            margin-left: 15px !important;
+        }
         i.selected {
-                color: coral;
-            }
-
+            color: coral;
+        }
     }
 }
 
+.suggest {
+    width: 50%;
+    text-align: center;
+    background-color: white;
+    padding: 1em;
+    @extend .z-depth-1;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    h1 {
+        margin: 0;
+        margin-top: .5em;
+        font-size: 2em;
+        color: coral;
+    }
+    .submit-button {
+        text-align: center;
+        margin-top: 2em;
+        button {
+            border: none;
+            background-color: coral;
+            color: white;
+            border-radius: 3px;
+            width: 10em;
+            height: 2em;
+            font-size: 1.25em;
+            margin-bottom: 1em;
+        }
+    }
+}
 
 //Pagination styles
 .herdl-pagination {
