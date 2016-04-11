@@ -10,6 +10,7 @@ body {
     background-color: $background;
 }
 
+i {cursor: pointer}
 .navbar-fixed {
     z-index: 999;
     .nav-wrapper {
@@ -83,7 +84,7 @@ body {
         i {
             color: $teal;
         }
-        
+
         i.selected {
                 color: coral;
             }

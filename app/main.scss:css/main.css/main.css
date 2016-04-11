@@ -6125,6 +6125,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 body {
   background-color: #f5f5f5; }
 
+i {
+  cursor: pointer; }
+
 .navbar-fixed {
   z-index: 999; }
   .navbar-fixed .nav-wrapper {
